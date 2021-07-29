@@ -12,23 +12,34 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Table
-@Getter
-@Setter
+@Table(name = "location_products")
 public class Location {
     @Id
     @SequenceGenerator(name = "location_sequence", sequenceName = "location_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "location_sequence")    
     private Long id;
-    private String name;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "location_id")
     private List<Product> products;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 
     public Location() {
 
