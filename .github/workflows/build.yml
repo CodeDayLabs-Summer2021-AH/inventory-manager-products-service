@@ -68,7 +68,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       #Analyze project with SonarCloud
       - name: Analyze with SonarCloud
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=CodeDayLabs-Summer2021-AH_inventory-manager-products-service -Dsonar.organization=codedaylabs-summer2021-ah -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
