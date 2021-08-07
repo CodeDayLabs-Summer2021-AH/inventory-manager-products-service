@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Collections;
+import java.util.Date;
 
 import org.cdl.productsservice.config.LocationProductsNotFoundException;
 import org.cdl.productsservice.model.Location;
@@ -34,7 +35,8 @@ public class ProductServiceTest {
         mockProducts.setSku("test-sku");
         mockProducts.setRow("Row 1");
         mockProducts.setSection("Section 1");
-        mockProducts.setQuantity_on_hand(5.0);
+        mockProducts.setQuantityOnHand(5.0);
+        mockProducts.setDateReceived(new Date());
         mockProducts.setImage("test.png");
         
         Location mockLocation = new Location();
@@ -58,7 +60,7 @@ public class ProductServiceTest {
                 () -> productService.getLocationProductsById(1L)
         );
         
-        assertEquals(execption.getMessage(), "Location with id '1' not found!");
+        assertEquals("Location with id '1' not found!", execption.getMessage());
 
     }    
 }

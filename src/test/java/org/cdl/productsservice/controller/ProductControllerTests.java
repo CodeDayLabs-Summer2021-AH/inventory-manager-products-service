@@ -1,6 +1,7 @@
 package org.cdl.productsservice.controller;
 
 import java.util.Collections;
+import java.util.Date;
 
 import org.cdl.productsservice.config.LocationProductsNotFoundException;
 import org.cdl.productsservice.model.Location;
@@ -38,7 +39,8 @@ public class ProductControllerTests {
         mockProducts.setSku("test-sku");
         mockProducts.setRow("Row 1");
         mockProducts.setSection("Section 1");
-        mockProducts.setQuantity_on_hand(5.0);
+        mockProducts.setQuantityOnHand(5.0);
+        mockProducts.setDateReceived(new Date());
         mockProducts.setImage("test.png");
         
         Location mockLocation = new Location();
@@ -61,7 +63,8 @@ public class ProductControllerTests {
         mockProducts.setSku("test-sku");
         mockProducts.setRow("Row 1");
         mockProducts.setSection("Section 1");
-        mockProducts.setQuantity_on_hand(5.0);
+        mockProducts.setQuantityOnHand(5.0);
+        mockProducts.setDateReceived(new Date());
         mockProducts.setImage("test.png");
         
         Location mockLocation = new Location();

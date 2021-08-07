@@ -20,21 +20,21 @@ public class Product {
     private String name;
     private String row;
     private String section;
-    private double quantity_on_hand;
-    private Date date_received;
+    private double quantityOnHand;
+    private Date dateReceived;
     private String image;
 
     public Product() {
         
     }
 
-    public Product(String sku, String name, String row, String section, double quantity_on_hand, Date date_received, String image) { 
+    public Product(String sku, String name, String row, String section, double quantityOnHand, Date dateReceived, String image) { 
         this.sku = sku;
         this.name = name;
         this.row = row;
         this.section = section;
-        this.quantity_on_hand = quantity_on_hand;
-        this.date_received = date_received;
+        this.quantityOnHand = quantityOnHand;
+        this.dateReceived = dateReceived;
         this.image = image;
     }
 
@@ -78,20 +78,20 @@ public class Product {
         this.section = section;
     }
 
-    public double getQuantity_on_hand() {
-        return quantity_on_hand;
+    public double getQuantityOnHand() {
+        return quantityOnHand;
     }
 
-    public void setQuantity_on_hand(double quantity_on_hand) {
-        this.quantity_on_hand = quantity_on_hand;
+    public void setQuantityOnHand(double quantityOnHand) {
+        this.quantityOnHand = quantityOnHand;
     }
 
-    public Date getDate_received() {
-        return date_received;
+    public Date getDatReceived() {
+        return dateReceived;
     }
 
-    public void setDate_received(Date date_received) {
-        this.date_received = date_received;
+    public void setDateReceived(Date dateReceived) {
+        this.dateReceived = dateReceived;
     }
 
     public String getImage() {
