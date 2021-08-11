@@ -98,7 +98,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       #Build the application using Maven
       - name: Build with Maven
-        run: mvn -B package -DskipTests --file pom.xml
+        run: mvn -B package -DskipTests --file pom.xml -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
       #Build the application using Maven
       - name: Upload JAR
         #This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
