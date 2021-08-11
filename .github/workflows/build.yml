@@ -134,4 +134,4 @@ jobs:
           environment_name: Springbootdeploy-env
           version_label: ${{github.SHA}}
           region: us-east-2
-          deployment_package: target/products-service-0.0.1-SNAPSHOT.jar
+          deployment_package: /home/runner/work/inventory-manager-products-service/inventory-manager-products-service/target/products-service-0.0.1-SNAPSHOT.jar
