@@ -19,9 +19,15 @@ public class ProductConfig {
             Product b = new Product("QTI-BIG-Q-TIP", "Q-Tip 2.0", "Row 2", "Section 10", 1000.5, new Date(), "https://i.imgur.com/9SzGfiH.png");
             Product c = new Product("VOL-VOL-QUA-FAX", "Voltquadfax", "Row 2", "Section 3", 6, new Date(), "https://i.imgur.com/9SzGfiH.png");
 
-            Location location = new Location(List.of(a, b, c));
+            Product d = new Product("TRE-MED-GRE-LEA", "Tree Solhold", "Row 1", "Section 5", 50, new Date(), "https://i.imgur.com/9SzGfiH.png");
+            Product e = new Product("QTI-BIG-Q-TIP", "Q-Tip 2.0", "Row 2", "Section 10", 1000.5, new Date(), "https://i.imgur.com/9SzGfiH.png");
+            Product f = new Product("VOL-VOL-QUA-FAX", "Voltquadfax", "Row 2", "Section 3", 6, new Date(), "https://i.imgur.com/9SzGfiH.png");
 
-            productRepository.save(location);
+            Location location1 = new Location(List.of(a, b, c));
+            Location location2 = new Location(List.of(d, e, f));
+
+            productRepository.save(location1);
+            productRepository.save(location2);
         };
     }
 }
