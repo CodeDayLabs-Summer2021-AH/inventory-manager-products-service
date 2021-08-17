@@ -86,7 +86,7 @@ public class Product {
         this.quantityOnHand = quantityOnHand;
     }
 
-    public Date getDatReceived() {
+    public Date getDateReceived() {
         return dateReceived;
     }
 
